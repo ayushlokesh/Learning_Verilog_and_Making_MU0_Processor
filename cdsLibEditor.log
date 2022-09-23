@@ -1,0 +1,26 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.8 - CAT37 09/14/2021 20:40 (sjfhw830) $
+\o Sub version:		sub-version  s215 
+\o Arguments:		-display :0 -mpssession virtuoso2986 -mpshost csimage-VirtualBox -namespace CDBA -cdslib /home/csimage/Cadence/COMP12111/cds.lib 
+\o Working Directory:	csimage-VirtualBox:/home/csimage/Cadence/COMP12111
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		5.9.1
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "basic"
+\a nrResizeWindow(cdsLibEditor list(697 301 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 7 1)
+\o Active cell: 7 1 "$HOME/Cadence/COMP12111_working/MU0_lib"
+\a nrListItemAction(cdsLibEditor->mainTable 7 0)
+\o Active cell: 7 0 "JSP"
+\a nrListItemAction(cdsLibEditor->mainTable 7 1)
+\o Active cell: 7 1 "$HOME/Cadence/COMP12111_working/MU0_lib"
+\a nrListItemAction(cdsLibEditor->mainTable 7 0)
+\o Active cell: 7 0 "JSP"
+\a cdsLibEditor->editDeleteButton->value = t
+\a nrListItemAction(cdsLibEditor->mainTable 7 1)
+\o Active cell: 7 1 "$HOME/Cadence/COMP12111_working/MU0_lib"
+\a nrListItemAction(cdsLibEditor->mainTable 6 1)
+\o Active cell: 6 1 "MU0_lib"
+\a cdsLibEditor->fileSaveButton->value = t
+\a exit(0)
