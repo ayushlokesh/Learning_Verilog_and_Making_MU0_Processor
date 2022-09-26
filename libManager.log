@@ -1,7 +1,7 @@
 \o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 09/14/2021 20:38 (sjfhw830) $
 \o Sub version:		sub-version  s215 
-\o Arguments:		-unmapped -mpssession virtuoso265080 -mpshost E-10CKILF1603.it.manchester.ac.uk 
-\o Working Directory:	E-10CKILF1603.it.manchester.ac.uk:/home/mbassjsp/Cadence/COMP12111
+\o Arguments:		-unmapped -mpssession virtuoso70737 -mpshost E-10CKI2TL0035.it.manchester.ac.uk 
+\o Working Directory:	E-10CKI2TL0035.it.manchester.ac.uk:/home/mbassjsp/Cadence/COMP12111
 \o 64-bit offsets
 \o Qt version: 		5.9.1
 \o changeWorkingDir("/home/mbassjsp/Cadence/COMP12111") unnecessary.
@@ -10,16 +10,16 @@
 \o Opening libManager window.
 \a nrSetWindowVisibility(cdsLibManager "show")
 \o MPS service: map window
-\o Library Manager customization server connected.
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(371 45 704 501))
-\a cdsLibManager->libListBox->value = "COMP12111_lib"
-\a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a cdsLibManager->cellListBox->value = "trafficlight"
-\a cdsLibManager->cellLineEdit->value = "trafficlight"
+\o Library Manager customization server connected.
+\a nrResizeWindow(cdsLibManager list(302 65 1090 728))
+\a cdsLibManager->libListBox->value = "MU0_lib"
+\a cdsLibManager->libLineEdit->value = "MU0_lib"
+\a cdsLibManager->cellListBox->value = "memory_mu0"
+\a cdsLibManager->cellLineEdit->value = "memory_mu0"
 \a cdsLibManager->viewListBox->value = "functional"
 \a cdsLibManager->viewLineEdit->value = "functional"
-\a lmgrLogShowPopup("mainListPopup2" 60 5 2 "functional")
+\a lmgrLogShowPopup("mainListPopup2" 49 10 2 "functional")
 \a cdsLibManager->FileOpenButton->value = t
 \o MPS request: edit design
 \a nrSetCurrentWindow(cdsLibManager)
@@ -29,35 +29,16 @@
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->libListBox->value = "COMP12111_lib"
-\a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a cdsLibManager->cellListBox->value = "trafficlight"
-\a cdsLibManager->cellLineEdit->value = "trafficlight"
+\a cdsLibManager->libListBox->value = "MU0_lib"
+\a cdsLibManager->libLineEdit->value = "MU0_lib"
+\a cdsLibManager->cellListBox->value = "memory_mu0"
+\a cdsLibManager->cellLineEdit->value = "memory_mu0"
 \a cdsLibManager->viewListBox->value = "functional"
 \a cdsLibManager->viewLineEdit->value = "functional"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "functional"
 \a cdsLibManager->viewLineEdit->value = "functional"
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(1039 376 704 501))
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->viewListBox->value = "symbol"
-\a cdsLibManager->viewLineEdit->value = "symbol"
-\a lmgrLogShowPopup("mainListPopup2" 44 29 2 "symbol")
-\a cdsLibManager->FileOpenButton->value = t
-\o MPS request: edit design
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->viewListBox->value = "functional"
-\a cdsLibManager->viewLineEdit->value = "functional"
-\a lmgrLogShowPopup("mainListPopup2" 32 7 2 "functional")
-\a cdsLibManager->FileOpenButton->value = t
-\o MPS request: edit design
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
 \a cdsLibManager->fileExitButton->value = t
 \o libManager is exiting.
 \a exit(0)

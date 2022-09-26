@@ -168,7 +168,7 @@ always @(*)
   12'hFF3 : read_data0 = buzzer_busy;
   12'hFF2 : read_data0 = keypad;
   12'hFF1 : read_data0 = buttons_AtoH; 
-  12'hFF0 : read_data1 = Simple_buttons;
+  12'hFF0 : read_data0 = Simple_buttons;
   default : read_data0 = mem_read_data0;
  endcase
 
