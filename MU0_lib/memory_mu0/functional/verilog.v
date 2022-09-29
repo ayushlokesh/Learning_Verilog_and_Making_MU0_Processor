@@ -115,8 +115,8 @@ reg   bp_mem_read_data_io_cpu;    // cpu read port for breakpoint ram, used for 
 
 
 initial
-$readmemh("/opt/info/courses/COMP12111/MU0_examples/MU0_test.mem", mem); // load default MU0 test program
-//$readmemh("/SharedVM/MU0_test.mem", mem); // load default MU0 test program
+$readmemh("/netopt/info/courses/COMP12111/MU0_examples/MU0_test.mem", mem); // load default MU0 test program
+
 
 
 // RAM
