@@ -1,0 +1,1 @@
+("fulladder:/\tfulladder COMP12111_lib schematic" (("open" (nil hierarchy "/{COMP12111_lib fulladder schematic }:a"))) (((1.36875 1.1875) (1.75 1.45625)) "a" "Schematics" 6))("adder_16bit:/\tadder_16bit COMP12111_lib schematic" (("open" (nil hierarchy "/{COMP12111_lib adder_16bit schematic }:a"))) (((-3.3125 -1.6125) (3.4 2.51875)) "a" "Schematics" 2))
