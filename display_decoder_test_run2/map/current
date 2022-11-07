@@ -1,0 +1,25 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "display_decoder"
+  repList "behavioral functional system verilog pld_verilog lai_verilog lmsi_verilog schematic symbol"
+  stopList "verilog pld_verilog lai_verilog lmsi_verilog symbol"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/home/z86327ag/Cadence/COMP12111/display_decoder_test_run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( defbus
+( "segment_pattern" 14 0  "segment_pattern" 14 0  )
+( "input_code" 3 0  "input_code" 3 0  )
+ )
+( model
+( "COMP12111_lib/display_decoder/functional" "display_decoder" )
+ )
+( "display_decoder" "ihnl/cds0/map" )
+ )

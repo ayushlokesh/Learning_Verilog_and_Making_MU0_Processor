@@ -1,0 +1,16 @@
+
+`timescale 1ns / 10ps
+
+module test;
+
+
+
+
+wire [14:0]  segment_pattern;
+
+reg [3:0]  input_code;
+
+
+
+display_decoder top(input_code, segment_pattern); 
+ 

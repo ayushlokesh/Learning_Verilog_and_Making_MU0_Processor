@@ -1,0 +1,8 @@
+CADENCE IHNL11140
+$model
+COMP12111_lib/display_decoder/functional display_decoder
+$endmodel
+$net
+$endnet
+$param
+$endparam

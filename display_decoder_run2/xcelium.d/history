@@ -1,0 +1,6 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(04Nov2022:15:12:10):( /cadtools5/cds_root2/XCELIUM2103/tools.lnx86/bin/64bit/ncxlmode +delay_mode_path +typdelays -y /cadtools5/xil_cds_design_kits/verilog/unisims +libext+.v -l simout.tmp /home/z86327ag/Cadence/COMP12111/display_decoder_run1/testfixture.template -f /home/z86327ag/Cadence/COMP12111/display_decoder_run1/verilog.inpfiles -f /netopt/info/courses/COMP12111/JUNE2022/Cadence/reffiles/include +nostdout +nocopyright +compile "+ncvlogargs+ -neverwarn -nostdout -nocopyright " )
+s2::(04Nov2022:15:21:45):( /cadtools5/cds_root2/XCELIUM2103/tools.lnx86/bin/64bit/ncxlmode +delay_mode_path +typdelays -y /cadtools5/xil_cds_design_kits/verilog/unisims +libext+.v -l simout.tmp /home/z86327ag/Cadence/COMP12111/display_decoder_run1/testfixture.template -f /home/z86327ag/Cadence/COMP12111/display_decoder_run1/verilog.inpfiles -f /netopt/info/courses/COMP12111/JUNE2022/Cadence/reffiles/include +nostdout +nocopyright +compile "+ncvlogargs+ -neverwarn -nostdout -nocopyright " )

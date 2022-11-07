@@ -1,0 +1,34 @@
+TOOL:	xmxlmode	21.03-s009: Started on Nov 04, 2022 at 15:21:44 GMT
+/cadtools5/cds_root2/XCELIUM2103/tools.lnx86/bin/64bit/ncxlmode
+	+delay_mode_path
+	+typdelays
+	-y
+	/cadtools5/xil_cds_design_kits/verilog/unisims
+	+libext+.v
+	-l
+	simout.tmp
+	/home/z86327ag/Cadence/COMP12111/display_decoder_run1/testfixture.template
+	-f /home/z86327ag/Cadence/COMP12111/display_decoder_run1/verilog.inpfiles
+		/home/z86327ag/Cadence/COMP12111/COMP12111_lib/display_decoder/functional/verilog.v
+		ihnl/cds0/netlist
+	-f /netopt/info/courses/COMP12111/JUNE2022/Cadence/reffiles/include
+		/cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
+		+incdir+..
+		+nccdslib+../cds.lib
+	+nostdout
+	+nocopyright
+	+compile
+	+ncvlogargs+" -neverwarn -nostdout -nocopyright "
+xmxlmode: *W,OPDEPRREN: Command Line Option (+nccdslib+../cds.lib) is deprecated. Use (+xmcdslib+../cds.lib) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncvlogargs+ -neverwarn -nostdout -nocopyright ) is deprecated. Use (+xmvlogargs+ -neverwarn -nostdout -nocopyright ) instead.
+file: /home/z86327ag/Cadence/COMP12111/display_decoder_run1/testfixture.template
+#100 bcd=0;
+       |
+xmvlog: *E,UNDIDN (/home/z86327ag/Cadence/COMP12111/display_decoder_run1/testfixture.verilog,15|7): 'bcd': undeclared identifier [12.5(IEEE)].
+	module worklib.test:template
+		errors: 1, warnings: 0
+file: ihnl/cds0/netlist
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+xmxlmode: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xmxlmode	21.03-s009: Exiting on Nov 04, 2022 at 15:21:45 GMT  (total: 00:00:01)

@@ -1,0 +1,89 @@
+// Library - COMP12111_lib, Cell - display_decoder_test, View -
+//schematic
+// LAST TIME SAVED: Nov  7 12:36:52 2022
+// NETLIST TIME: Nov  7 12:40:13 2022
+`timescale 1ns / 10ps 
+
+module display_decoder_test ( Buzzer_pin, Columns_pin, S7_leds_pin,
+     Segments_pin, Traffic_lights_pin, dac_cs_pin, dac_data_pin,
+     dac_load_pin, dac_pd_pin, dac_we_pin, keyrow_pin, ftdi, Clk,
+     Reset, Simple_buttons_pin, keycol_pin );
+
+output  Buzzer_pin, dac_cs_pin, dac_load_pin, dac_pd_pin, dac_we_pin;
+
+
+input  Clk, Reset;
+
+output [10:0]  Traffic_lights_pin;
+output [14:0]  Segments_pin;
+output [5:0]  Columns_pin;
+output [3:0]  keyrow_pin;
+output [11:0]  dac_data_pin;
+output [1:0]  S7_leds_pin;
+
+inout [3:0]  ftdi;
+
+input [3:0]  Simple_buttons_pin;
+input [5:0]  keycol_pin;
+
+// Buses in the design
+
+wire  [0:3]  net23;
+
+wire  [0:15]  net20;
+
+wire  [0:11]  net19;
+
+wire  [0:15]  net18;
+
+wire  [0:3]  net28;
+
+wire  [0:15]  net24;
+
+wire  [0:14]  net26;
+
+wire  [23:0]  button;
+
+
+specify 
+    specparam CDS_LIBNAME  = "COMP12111_lib";
+    specparam CDS_CELLNAME = "display_decoder_test";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+GND  I38[15:0] ( .G(net24[0:15]));
+GND  I37[3:0] ( .G(net28[0:3]));
+GND  I35 ( .G(net29));
+GND  I34 ( .G(net25));
+GND  I33 ( .G(net10));
+GND  I9 ( .G(net9));
+GND  I8 ( .G(net8));
+GND  I7 ( .G(net7));
+GND  I6 ( .G(net6));
+GND  I4 ( .G(net5));
+GND  I5 ( .G(net4));
+GND  I3 ( .G(net3));
+GND  I19 ( .G(net11));
+VCC  I2 ( .P(net2));
+BoardV3 I0 ( Buzzer_pin, net27, net13, net14, net12, Columns_pin[5:0],
+     S7_leds_pin[1:0], Segments_pin[14:0], net23[0:3],
+     Traffic_lights_pin[10:0], net21, net22, net20[0:15], button[23:0],
+     dac_cs_pin, dac_data_pin[11:0], dac_load_pin, dac_pd_pin,
+     dac_we_pin, keyrow_pin[3:0], net19[0:11], net18[0:15], net17,
+     net16, net15, ftdi[3:0], net5, Clk, {net25, net25, net25, net25,
+     net25}, {net29, net29, net29, net29, net29, net29}, net26[0:14],
+     {net10, net10, net10, net10, net10, net10, net10, net10, net10,
+     net10, net10, net10, net10, net10, net10}, {net9, net9, net9,
+     net9, net9, net9, net9, net9, net9, net9, net9, net9, net9, net9,
+     net9}, {net8, net8, net8, net8, net8, net8, net8, net8, net8,
+     net8, net8, net8, net8, net8, net8}, {net7, net7, net7, net7,
+     net7, net7, net7, net7, net7, net7, net7, net7, net7, net7, net7},
+     {net6, net6, net6, net6, net6, net6, net6, net6, net6, net6, net6,
+     net6, net6, net6, net6}, Reset, {net4, net4},
+     Simple_buttons_pin[3:0], net11, net11, {net3, net3, net3, net3,
+     net3, net3, net3, net3, net3, net3, net3, net3}, net2,
+     keycol_pin[5:0], net24[0:15], net28[0:3], net24[0:15], net11,
+     net11);
+display_decoder I36 ( button[19:16], net26[0:14]);
+
+endmodule

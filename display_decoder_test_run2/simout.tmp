@@ -1,0 +1,66 @@
+TOOL:	xmxlmode	21.03-s009: Started on Nov 07, 2022 at 11:23:36 GMT
+/cadtools5/cds_root2/XCELIUM2103/tools.lnx86/bin/64bit/ncxlmode
+	+delay_mode_path
+	+typdelays
+	-y
+	/cadtools5/xil_cds_design_kits/verilog/unisims
+	+libext+.v
+	-l
+	simout.tmp
+	/home/z86327ag/Cadence/COMP12111/display_decoder_test_run1/testfixture.template
+	-f /home/z86327ag/Cadence/COMP12111/display_decoder_test_run1/verilog.inpfiles
+		/home/z86327ag/Cadence/COMP12111/COMP12111_lib/display_decoder/functional/verilog.v
+		ihnl/cds0/netlist
+	-f /netopt/info/courses/COMP12111/JUNE2022/Cadence/reffiles/include
+		/cadtools5/Xilinx_14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
+		+incdir+..
+		+nccdslib+../cds.lib
+	+nostdout
+	+nocopyright
+	+ncvlogargs+" -neverwarn -nostdout -nocopyright "
+	+ncelabargs+" -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright"
+	+ncsimargs+" -neverwarn  -nocopyright -gui -input /home/z86327ag/Cadence/COMP12111/display_decoder_test_run1/.simTmpNCCmd "
+	+mpssession+virtuoso50555
+	+mpshost+E-10CKILF1648.it.manchester.ac.uk
+xmxlmode: *W,OPDEPRREN: Command Line Option (+nccdslib+../cds.lib) is deprecated. Use (+xmcdslib+../cds.lib) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncvlogargs+ -neverwarn -nostdout -nocopyright ) is deprecated. Use (+xmvlogargs+ -neverwarn -nostdout -nocopyright ) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright) is deprecated. Use (+xmelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -access +w  -access +c  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/10ps -nostdout -nocopyright) instead.
+xmxlmode: *W,OPDEPRREN: Command Line Option (+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/z86327ag/Cadence/COMP12111/display_decoder_test_run1/.simTmpNCCmd ) is deprecated. Use (+xmsimargs+ -neverwarn  -nocopyright -gui -input /home/z86327ag/Cadence/COMP12111/display_decoder_test_run1/.simTmpNCCmd ) instead.
+Recompiling... reason: file './testfixture.verilog' is newer than expected.
+	expected: Mon Nov  7 11:23:35 2022
+	actual:   Mon Nov  7 11:23:36 2022
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Registers:              18      18
+		Scalar wires:           13       -
+		Vectored wires:          2       -
+		Always blocks:           1       1
+		Initial blocks:         11      11
+		Cont. assignments:       1       4
+		Pseudo assignments:      1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.test:template
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /cadtools5/cds_root2/XCELIUM2103/tools/xcelium/files/xmsimrc
+xcelium> database -open shmWave -shm -default -into shm.db
+Created default SHM database shmWave
+xcelium> probe -create -shm test  -all   -depth 1
+Created probe 1
+xcelium> probe -create -shm test.top.segment_pattern test.top.input_code
+Created probe 2
+xcelium> run
+Simulation stopped via $stop(1) at time 185 NS + 0
+xcelium> ^C
+xcelium> exit
+TOOL:	xmxlmode	21.03-s009: Exiting on Nov 07, 2022 at 11:24:37 GMT  (total: 00:01:01)

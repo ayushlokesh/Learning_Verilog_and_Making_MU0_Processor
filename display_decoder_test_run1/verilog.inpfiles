@@ -1,0 +1,42 @@
+// Verilog HDL and netlist files of
+// "COMP12111_lib display_decoder_test schematic"
+
+// HDL models
+
+// HDL file - COMP12111_lib, display_decoder, functional.
+/home/z86327ag/Cadence/COMP12111/COMP12111_lib/display_decoder/functional/verilog.v
+
+// HDL file - Board_lib, Clocks, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/Clocks/functional/verilog.v
+
+// HDL file - Board_lib, ackieV2, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/ackieV2/functional/verilog.v
+
+// HDL file - Board_lib, uart_s7, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/uart_s7/functional/verilog.v
+
+// HDL file - Board_lib, Board_reset, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/Board_reset/functional/verilog.v
+
+// HDL file - Board_lib, segments_scan, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/segments_scan/functional/verilog.v
+
+// HDL file - Board_lib, Keyboard, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/Keyboard/functional/verilog.v
+
+
+// End HDL models
+
+
+// alias module. For internal use only.
+hdlFilesDir/cds_alias.v
+
+// Netlisted models
+
+// netlist file - Board_lib, BoardV3, schematic.
+ihnl/cds0/netlist
+// netlist file - COMP12111_lib, display_decoder_test, schematic.
+ihnl/cds1/netlist
+
+
+// End HDL models

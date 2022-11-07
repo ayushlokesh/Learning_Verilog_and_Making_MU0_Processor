@@ -1,0 +1,25 @@
+
+`timescale 1ns / 10ps
+
+module test;
+
+
+
+
+wire [14:0]  segment_pattern;
+
+reg [3:0]  input_code;
+
+
+
+display_decoder top(input_code, segment_pattern); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/z86327ag/Cadence/COMP12111/display_decoder_test_run1/testfixture.verilog file
+`include "/home/z86327ag/Cadence/COMP12111/display_decoder_test_run1/testfixture.verilog"
+
+`endif
+
+endmodule 

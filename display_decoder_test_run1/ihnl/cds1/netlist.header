@@ -1,0 +1,53 @@
+// Library - COMP12111_lib, Cell - display_decoder_test, View -
+//schematic
+// LAST TIME SAVED: Nov  7 12:36:52 2022
+// NETLIST TIME: Nov  7 12:40:13 2022
+`timescale 1ns / 10ps 
+
+module display_decoder_test ( Buzzer_pin, Columns_pin, S7_leds_pin,
+     Segments_pin, Traffic_lights_pin, dac_cs_pin, dac_data_pin,
+     dac_load_pin, dac_pd_pin, dac_we_pin, keyrow_pin, ftdi, Clk,
+     Reset, Simple_buttons_pin, keycol_pin );
+
+output  Buzzer_pin, dac_cs_pin, dac_load_pin, dac_pd_pin, dac_we_pin;
+
+
+input  Clk, Reset;
+
+output [10:0]  Traffic_lights_pin;
+output [14:0]  Segments_pin;
+output [5:0]  Columns_pin;
+output [3:0]  keyrow_pin;
+output [11:0]  dac_data_pin;
+output [1:0]  S7_leds_pin;
+
+inout [3:0]  ftdi;
+
+input [3:0]  Simple_buttons_pin;
+input [5:0]  keycol_pin;
+
+// Buses in the design
+
+wire  [0:3]  net23;
+
+wire  [0:15]  net20;
+
+wire  [0:11]  net19;
+
+wire  [0:15]  net18;
+
+wire  [0:3]  net28;
+
+wire  [0:15]  net24;
+
+wire  [0:14]  net26;
+
+wire  [23:0]  button;
+
+
+specify 
+    specparam CDS_LIBNAME  = "COMP12111_lib";
+    specparam CDS_CELLNAME = "display_decoder_test";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

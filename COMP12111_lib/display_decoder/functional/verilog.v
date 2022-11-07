@@ -25,7 +25,27 @@ module display_decoder (input 		[3:0]  input_code,       // bcd input
 // combinatorial design
 // -----------------------------------------------------------------
 
-
+// To achieve the task we will use always block, and we will use cases for each of the following input value and we will tell what should be the output value.
+always @(input_code)
+  case(input_code) 
+  	0: segment_pattern = 15'b 000110000111111;
+  	1: segment_pattern = 15'b 000010000000110;
+  	2: segment_pattern = 15'b 000000011011011;
+  	3: segment_pattern = 15'b 000000011001111;
+  	4: segment_pattern = 15'b 000000011100110;
+  	5: segment_pattern = 15'b 000000011101101;
+  	6: segment_pattern = 15'b 000000011111101;
+  	7: segment_pattern = 15'b 001010000000001;
+  	8: segment_pattern = 15'b 000000011111111;
+  	9: segment_pattern = 15'b 000000011100111;
+	10: segment_pattern = 15'b 000000011110111;
+	11: segment_pattern = 15'b 001001010001111;
+	12: segment_pattern = 15'b 000000000111001;
+	13: segment_pattern = 15'b 001001000001111;
+	14: segment_pattern = 15'b 000000011111001;
+	15: segment_pattern = 15'b 000000011110001;
+	default :  segment_pattern = 15'b 000110000111111;
+  endcase
 
 
 
