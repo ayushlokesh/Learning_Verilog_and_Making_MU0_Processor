@@ -1,0 +1,15 @@
+
+`timescale 1ns / 10ps
+
+module test;
+
+
+
+reg  clock, reset, start;
+
+wire [4:0]  lightseq;
+
+
+
+trafficlight top(lightseq, clock, reset, start); 
+ 

@@ -1,7 +1,7 @@
 \o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 09/14/2021 20:38 (sjfhw830) $
 \o Sub version:		sub-version  s215 
-\o Arguments:		-unmapped -mpssession virtuoso57531 -mpshost E-10CKILF1648.it.manchester.ac.uk 
-\o Working Directory:	E-10CKILF1648.it.manchester.ac.uk:/home/z86327ag/Cadence/COMP12111
+\o Arguments:		-unmapped -mpssession virtuoso114263 -mpshost E-10CKILF1614.it.manchester.ac.uk 
+\o Working Directory:	E-10CKILF1614.it.manchester.ac.uk:/home/z86327ag/Cadence/COMP12111
 \o 64-bit offsets
 \o Qt version: 		5.9.1
 \o changeWorkingDir("/home/z86327ag/Cadence/COMP12111") unnecessary.
@@ -12,34 +12,29 @@
 \o MPS service: map window
 \o Library Manager customization server connected.
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(219 59 1386 1016))
+\a nrResizeWindow(cdsLibManager list(290 98 1386 1016))
 \a cdsLibManager->libListBox->value = "COMP12111_lib"
 \a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a nrListItemAction(cdsLibManager->libListBox "COMP12111_lib" 0)
-\a cdsLibManager->cellListBox->value = "display_decoder_test"
-\a cdsLibManager->cellLineEdit->value = "display_decoder_test"
+\a cdsLibManager->cellListBox->value = "trafficlight_test"
+\a cdsLibManager->cellLineEdit->value = "trafficlight_test"
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->cellListBox->value = "display_decoder_test"
-\a cdsLibManager->cellLineEdit->value = "display_decoder_test"
+\a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
 \o MPS request: edit design
-\a nrListItemAction(cdsLibManager->cellListBox 3 0)
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
 \a cdsLibManager->libListBox->value = nil
 \a cdsLibManager->libLineEdit->value = ""
-\a cdsLibManager->cellLineEdit->value = ""
 \a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
 \a cdsLibManager->libListBox->value = "COMP12111_lib"
 \a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a cdsLibManager->cellListBox->value = "display_decoder_test"
-\a cdsLibManager->cellLineEdit->value = "display_decoder_test"
+\a cdsLibManager->cellListBox->value = "trafficlight_test"
+\a cdsLibManager->cellLineEdit->value = "trafficlight_test"
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = ""
@@ -47,6 +42,6 @@
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetWindowVisibility(cdsLibManager "hide")
+\a cdsLibManager->fileExitButton->value = t
+\o libManager is exiting.
+\a exit(0)

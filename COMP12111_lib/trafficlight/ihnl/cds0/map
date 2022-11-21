@@ -1,0 +1,11 @@
+( ( defbus
+( "lightseq" 4 0  "lightseq" 4 0  )
+ )
+( net
+( "lightseq<0>" "lightseq[0]" )
+( "lightseq<3>" "lightseq[3]" )
+( "lightseq<4>" "lightseq[4]" )
+( "lightseq<2>" "lightseq[2]" )
+( "lightseq<1>" "lightseq[1]" )
+ )
+ )

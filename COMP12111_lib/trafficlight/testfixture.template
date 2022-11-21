@@ -1,0 +1,24 @@
+
+`timescale 1ns / 10ps
+
+module test;
+
+
+
+reg  clock, reset, start;
+
+wire [4:0]  lightseq;
+
+
+
+trafficlight top(lightseq, clock, reset, start); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/z86327ag/Cadence/COMP12111/COMP12111_lib/trafficlight/testfixture.verilog file
+`include "/home/z86327ag/Cadence/COMP12111/COMP12111_lib/trafficlight/testfixture.verilog"
+
+`endif
+
+endmodule 
