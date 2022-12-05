@@ -1,0 +1,6 @@
+fulladder I3 ( net2, s[1], a[1], b[1], net1);
+fulladder I2 ( net1, s[0], a[0], b[0], cin);
+fulladder I1 ( cout, s[3], a[3], b[3], net3);
+fulladder I0 ( net3, s[2], a[2], b[2], net2);
+
+endmodule

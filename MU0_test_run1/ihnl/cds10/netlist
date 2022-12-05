@@ -1,0 +1,70 @@
+// Library - MU0_lib, Cell - MU0_test, View - schematic
+// LAST TIME SAVED: Sep 29 10:08:44 2022
+// NETLIST TIME: Dec  5 14:04:41 2022
+`timescale 1ns / 10ps 
+
+module MU0_test ( Fetch, Halted, N, Z, Clk, Reset );
+
+output  Fetch, Halted, N, Z;
+
+input  Clk, Reset;
+
+// Buses in the design
+
+wire  [1:0]  mem_addr;
+
+wire  [0:15]  net030;
+
+wire  [15:0]  Din;
+
+wire  [0:3]  net049;
+
+wire  [0:3]  net047;
+
+wire  [0:3]  net046;
+
+wire  [0:15]  net029;
+
+wire  [0:15]  net027;
+
+wire  [0:1]  net4;
+
+wire  [0:3]  net045;
+
+wire  [15:0]  Dout;
+
+wire  [0:3]  net044;
+
+wire  [0:11]  net028;
+
+wire  [11:0]  Addr;
+
+wire  [0:3]  net048;
+
+wire  [0:10]  net2;
+
+wire  [0:15]  net017;
+
+
+specify 
+    specparam CDS_LIBNAME  = "MU0_lib";
+    specparam CDS_CELLNAME = "MU0_test";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+MU0 Proc1 ( Addr[11:0], Dout[15:0], Halted, net032, Wr, {Z, N}, Fetch,
+     net030[0:15], Clk, Din[15:0], Reset, mem_addr[1:0]);
+GND  I27 ( .G(net01));
+GND  I26 ( .G(net06));
+GND  I32 ( .G(net016));
+GND  I31[1:0] ( .G(mem_addr[1:0]));
+memory_mu0 Mem1 ( Clk, Addr[11:0], Dout[15:0], Din[15:0], Wr,
+     net028[0:11], net027[0:15], net029[0:15], net06, net2[0:10],
+     net011, net049[0:3], net048[0:3], net047[0:3], net046[0:3],
+     net045[0:3], net044[0:3], net4[0:1], {net01, net01, net01, net01,
+     net01, net01, net01, net01, net01, net01, net01, net01, net01,
+     net01, net01, net01}, {net01, net01, net01, net01, net01, net01,
+     net01, net01}, {net01, net01, net01, net01}, net016, net017[0:15],
+     net015, net014, net013);
+
+endmodule

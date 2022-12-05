@@ -1,0 +1,86 @@
+// Library - MU0_lib, Cell - MU0_system, View - schematic
+// LAST TIME SAVED: Sep 20 11:46:26 2022
+// NETLIST TIME: Dec  5 15:21:14 2022
+`timescale 1ns / 10ps 
+
+module MU0_system ( Buzzer_pin, Columns_pin, S7_leds_pin, Segments_pin,
+     Traffic_lights_pin, dac_cs_pin, dac_data_pin, dac_load_pin,
+     dac_pd_pin, dac_we_pin, keyrow_pin, ftdi, Clk, Reset,
+     Simple_buttons_pin, keycol_pin );
+
+output  Buzzer_pin, dac_cs_pin, dac_load_pin, dac_pd_pin, dac_we_pin;
+
+
+input  Clk, Reset;
+
+output [1:0]  S7_leds_pin;
+output [5:0]  Columns_pin;
+output [3:0]  keyrow_pin;
+output [11:0]  dac_data_pin;
+output [14:0]  Segments_pin;
+output [10:0]  Traffic_lights_pin;
+
+inout [3:0]  ftdi;
+
+input [3:0]  Simple_buttons_pin;
+input [5:0]  keycol_pin;
+
+// Buses in the design
+
+wire  [3:0]  digit5;
+
+wire  [15:0]  breakpoint_adr;
+
+wire  [15:0]  mem_din;
+
+wire  [0:14]  net12;
+
+wire  [0:14]  net13;
+
+wire  [15:0]  mem_dout;
+
+wire  [3:0]  digit1;
+
+wire  [23:0]  buttons;
+
+wire  [15:0]  proc_din;
+
+wire  [0:14]  net11;
+
+wire  [0:15]  net15;
+
+wire  [3:0]  digit3;
+
+wire  [10:0]  traffic_lights;
+
+wire  [11:0]  mem_addr;
+
+wire  [3:0]  digit2;
+
+wire  [3:0]  digit0;
+
+wire  [3:0]  Simple_buttons;
+
+wire  [0:14]  net10;
+
+wire  [0:14]  net6;
+
+wire  [1:0]  s7_leds;
+
+wire  [3:0]  digit4;
+
+wire  [0:15]  net14;
+
+wire  [0:14]  net9;
+
+wire  [3:0]  proc_cc;
+
+wire  [11:0]  proc_addr;
+
+
+specify 
+    specparam CDS_LIBNAME  = "MU0_lib";
+    specparam CDS_CELLNAME = "MU0_system";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

@@ -1,6 +1,6 @@
 // Library - COMP12111_lib, Cell - fulladder, View - schematic
 // LAST TIME SAVED: Oct  6 17:26:06 2022
-// NETLIST TIME: Oct 13 11:43:09 2022
+// NETLIST TIME: Dec  5 11:59:11 2022
 `timescale 1ns / 10ps 
 
 module fulladder ( cout, s, a, b, cin );

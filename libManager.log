@@ -1,46 +1,43 @@
 \o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 09/14/2021 20:38 (sjfhw830) $
 \o Sub version:		sub-version  s215 
-\o Arguments:		-unmapped -mpssession virtuoso114263 -mpshost E-10CKILF1614.it.manchester.ac.uk 
-\o Working Directory:	E-10CKILF1614.it.manchester.ac.uk:/home/z86327ag/Cadence/COMP12111
+\o Arguments:		-mpssession virtuoso2720 -mpshost E-10CKILF1610.it.manchester.ac.uk 
+\o Working Directory:	E-10CKILF1610.it.manchester.ac.uk:/home/z86327ag/Cadence/COMP12111
 \o 64-bit offsets
 \o Qt version: 		5.9.1
-\o changeWorkingDir("/home/z86327ag/Cadence/COMP12111") unnecessary.
-\o ddSetForcedLib("") unnecessary.
 \o Log file is "/home/z86327ag/Cadence/COMP12111/libManager.log".
 \o Opening libManager window.
-\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(72 27 1848 1016))
+\o changeWorkingDir("/home/z86327ag/Cadence/COMP12111") unnecessary.
+\o ddSetForcedLib("") unnecessary.
 \o MPS service: map window
 \o Library Manager customization server connected.
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(290 98 1386 1016))
-\a cdsLibManager->libListBox->value = "COMP12111_lib"
-\a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a cdsLibManager->cellListBox->value = "trafficlight_test"
-\a cdsLibManager->cellLineEdit->value = "trafficlight_test"
+\a cdsLibManager->libListBox->value = "MU0_lib"
+\a cdsLibManager->libLineEdit->value = "MU0_lib"
+\a cdsLibManager->cellListBox->value = "MU0_system"
+\a cdsLibManager->cellLineEdit->value = "MU0_system"
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewListBox->value = nil
 \o MPS request: edit design
-\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrListItemAction(cdsLibManager->cellListBox 5 0)
 \a cdsLibManager->libListBox->value = nil
 \a cdsLibManager->libLineEdit->value = ""
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->libListBox->value = "COMP12111_lib"
-\a cdsLibManager->libLineEdit->value = "COMP12111_lib"
-\a cdsLibManager->cellListBox->value = "trafficlight_test"
-\a cdsLibManager->cellLineEdit->value = "trafficlight_test"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libListBox->value = "MU0_lib"
+\a cdsLibManager->libLineEdit->value = "MU0_lib"
+\a cdsLibManager->cellListBox->value = "MU0_system"
+\a cdsLibManager->cellLineEdit->value = "MU0_system"
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
 \a nrSetCurrentWindow(cdsLibManager)
 \a cdsLibManager->fileExitButton->value = t
 \o libManager is exiting.

@@ -1,0 +1,120 @@
+// Library - MU0_lib, Cell - MU0_system, View - schematic
+// LAST TIME SAVED: Sep 20 11:46:26 2022
+// NETLIST TIME: Dec  5 15:21:14 2022
+`timescale 1ns / 10ps 
+
+module MU0_system ( Buzzer_pin, Columns_pin, S7_leds_pin, Segments_pin,
+     Traffic_lights_pin, dac_cs_pin, dac_data_pin, dac_load_pin,
+     dac_pd_pin, dac_we_pin, keyrow_pin, ftdi, Clk, Reset,
+     Simple_buttons_pin, keycol_pin );
+
+output  Buzzer_pin, dac_cs_pin, dac_load_pin, dac_pd_pin, dac_we_pin;
+
+
+input  Clk, Reset;
+
+output [1:0]  S7_leds_pin;
+output [5:0]  Columns_pin;
+output [3:0]  keyrow_pin;
+output [11:0]  dac_data_pin;
+output [14:0]  Segments_pin;
+output [10:0]  Traffic_lights_pin;
+
+inout [3:0]  ftdi;
+
+input [3:0]  Simple_buttons_pin;
+input [5:0]  keycol_pin;
+
+// Buses in the design
+
+wire  [3:0]  digit5;
+
+wire  [15:0]  breakpoint_adr;
+
+wire  [15:0]  mem_din;
+
+wire  [0:14]  net12;
+
+wire  [0:14]  net13;
+
+wire  [15:0]  mem_dout;
+
+wire  [3:0]  digit1;
+
+wire  [23:0]  buttons;
+
+wire  [15:0]  proc_din;
+
+wire  [0:14]  net11;
+
+wire  [0:15]  net15;
+
+wire  [3:0]  digit3;
+
+wire  [10:0]  traffic_lights;
+
+wire  [11:0]  mem_addr;
+
+wire  [3:0]  digit2;
+
+wire  [3:0]  digit0;
+
+wire  [3:0]  Simple_buttons;
+
+wire  [0:14]  net10;
+
+wire  [0:14]  net6;
+
+wire  [1:0]  s7_leds;
+
+wire  [3:0]  digit4;
+
+wire  [0:15]  net14;
+
+wire  [0:14]  net9;
+
+wire  [3:0]  proc_cc;
+
+wire  [11:0]  proc_addr;
+
+
+specify 
+    specparam CDS_LIBNAME  = "MU0_lib";
+    specparam CDS_CELLNAME = "MU0_system";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+BoardV3 I0 ( Buzzer_pin, net3, net31, Clk_25MHz, net26,
+     Columns_pin[5:0], S7_leds_pin[1:0], Segments_pin[14:0],
+     Simple_buttons[3:0], Traffic_lights_pin[10:0], bp_mem_data_write,
+     bp_mem_write_en, breakpoint_adr[15:0], buttons[23:0], dac_cs_pin,
+     dac_data_pin[11:0], dac_load_pin, dac_pd_pin, dac_we_pin,
+     keyrow_pin[3:0], mem_addr[11:0], mem_dout[15:0], mem_wen,
+     proc_clk, proc_reset, ftdi[3:0], buzzer_pulses, Clk,
+     traffic_lights[4:0], traffic_lights[10:5], net13[0:14],
+     net12[0:14], net11[0:14], net10[0:14], net9[0:14], net6[0:14],
+     Reset, s7_leds[1:0], Simple_buttons_pin[3:0], bp_detected,
+     bp_mem_data_read, {net5, net5, net5, net5, net5, net5, net5, net5,
+     net5, net5, net5, net5}, net17, keycol_pin[5:0], mem_din[15:0],
+     proc_cc[3:0], proc_din[15:0], proc_fetch, proc_halted);
+MU0 I58 ( proc_addr[11:0], net15[0:15], proc_halted, net082, writeEn0,
+     proc_cc[1:0], proc_fetch, proc_din[15:0], proc_clk, net14[0:15],
+     proc_reset, mem_addr[1:0]);
+GND  I3 ( .G(net5));
+GND  I26[1:0] ( .G(proc_cc[3:2]));
+VCC  I2 ( .P(net17));
+memory_mu0 I21 ( Clk_25MHz, proc_addr[11:0], net15[0:15], net14[0:15],
+     writeEn0, mem_addr[11:0], mem_dout[15:0], mem_din[15:0], mem_wen,
+     traffic_lights[10:0], buzzer_pulses, digit5[3:0], digit4[3:0],
+     digit3[3:0], digit2[3:0], digit1[3:0], digit0[3:0], s7_leds[1:0],
+     buttons[15:0], buttons[23:16], Simple_buttons[3:0],
+     bp_mem_write_en, breakpoint_adr[15:0], bp_mem_data_write,
+     bp_mem_data_read, bp_detected);
+display_decoder I40 ( digit0[3:0], net13[0:14]);
+display_decoder I39 ( digit1[3:0], net12[0:14]);
+display_decoder I37 ( digit3[3:0], net10[0:14]);
+display_decoder I38 ( digit2[3:0], net11[0:14]);
+display_decoder I36 ( digit4[3:0], net9[0:14]);
+display_decoder I35 ( digit5[3:0], net6[0:14]);
+
+endmodule

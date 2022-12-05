@@ -1,0 +1,45 @@
+Keyboard I2 ( button[23:0], net11[0:3], Clk_1kHz, net14[0:5]);
+GND  I50 ( .G(net8));
+GND  I41 ( .G(net17));
+GND  I43 ( .G(net16));
+IBUF  I34[5:0] ( .O(net14[0:5]), .I(keycol_pin[5:0]));
+IBUF  I54 ( .O(Simple_buttons[3]), .I(Simple_buttons_pin[0]));
+IBUF  I53 ( .O(Simple_buttons[2]), .I(Simple_buttons_pin[1]));
+IBUF  I25 ( .O(Simple_buttons[1]), .I(Simple_buttons_pin[3]));
+IBUF  I52 ( .O(Simple_buttons[0]), .I(Simple_buttons_pin[2]));
+IBUF  I6 ( .O(Clk_100MHz), .I(Clk));
+segments_scan I11 ( Clk_1kHz, net2[0:5], Digit5[14:0], Digit4[14:0],
+     Digit3[14:0], Digit2[14:0], Digit1[14:0], Digit0[14:0],
+     net5[0:14]);
+Board_reset I24 ( Clk_100MHz, Reset);
+IOBUF  I49 ( .T(net8), .O(net18), .IO(ftdi[2]), .I(net12));
+IOBUF  I48 ( .T(net1), .O(net7), .IO(ftdi[3]), .I(net1));
+IOBUF  I51 ( .T(net1), .O(net9), .IO(ftdi[1]), .I(net1));
+IOBUF  I47 ( .T(net1), .O(net6), .IO(ftdi[0]), .I(net1));
+OBUF  I55[2:0] ( .O(Traffic_lights_pin[2:0]), .I(Crossing_A[2:0]));
+OBUF  I38 ( .O(dac_pd_pin), .I(net15));
+OBUF  I46 ( .O(dac_we_pin), .I(dac_we));
+OBUF  I28 ( .O(Buzzer_pin), .I(Buzzer));
+OBUF  I33[3:0] ( .O(keyrow_pin[3:0]), .I(net11[0:3]));
+OBUF  I27[5:0] ( .O(Columns_pin[5:0]), .I(net2[0:5]));
+OBUF  I26[14:0] ( .O(Segments_pin[14:0]), .I(net5[0:14]));
+OBUF  I36[11:0] ( .O(dac_data_pin[11:0]), .I(dac_data[11:0]));
+OBUF  I32 ( .O(S7_leds_pin[1]), .I(S7_leds[1]));
+OBUF  I31 ( .O(S7_leds_pin[0]), .I(S7_leds[0]));
+OBUF  I44 ( .O(dac_cs_pin), .I(net16));
+OBUF  I57[1:0] ( .O(Traffic_lights_pin[10:9]), .I(Crossing_A[4:3]));
+OBUF  I42 ( .O(dac_load_pin), .I(net17));
+OBUF  I56[5:0] ( .O(Traffic_lights_pin[8:3]), .I(Crossing_B[5:0]));
+uart_s7 I7 ( Clk_25MHz, net061[0:7], net060[0:7], net039, net038,
+     net13, net035, net12, net9);
+ackieV2 I4 ( Clk_25MHz, net060[0:7], net061[0:7], net035, net039,
+     net038, net13, mem_wen, mem_addr[11:0], mem_dout[15:0],
+     mem_din[15:0], proc_din[15:0], net063, proc_clk, proc_fetch,
+     proc_cc[3:0], proc_reset, proc_halted, bp_mem_write_en,
+     breakpoint_adr[15:0], bp_mem_data_write, bp_mem_data_read,
+     bp_detected);
+VCC  I40 ( .P(net15));
+VCC  I22 ( .P(net1));
+Clocks I37 ( Clk_1Hz, Clk_1kHz, Clk_25MHz, Clk_100MHz);
+
+endmodule

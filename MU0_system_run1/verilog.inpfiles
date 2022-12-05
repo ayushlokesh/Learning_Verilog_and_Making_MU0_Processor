@@ -1,0 +1,71 @@
+// Verilog HDL and netlist files of
+// "MU0_lib MU0_system schematic"
+
+// HDL models
+
+// HDL file - COMP12111_lib, display_decoder, functional.
+/home/z86327ag/Cadence/COMP12111/COMP12111_lib/display_decoder/functional/verilog.v
+
+// HDL file - MU0_lib, memory_mu0, functional.
+/home/z86327ag/Cadence/COMP12111/MU0_lib/memory_mu0/functional/verilog.v
+
+// HDL file - MU0_lib, mux_2to1_12bit, functional.
+/home/z86327ag/Cadence/COMP12111/MU0_lib/mux_2to1_12bit/functional/verilog.v
+
+// HDL file - MU0_lib, mux_2to1_16bit, functional.
+/home/z86327ag/Cadence/COMP12111/MU0_lib/mux_2to1_16bit/functional/verilog.v
+
+// HDL file - Board_lib, Clocks, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/Clocks/functional/verilog.v
+
+// HDL file - Board_lib, ackieV2, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/ackieV2/functional/verilog.v
+
+// HDL file - Board_lib, uart_s7, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/uart_s7/functional/verilog.v
+
+// HDL file - Board_lib, Board_reset, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/Board_reset/functional/verilog.v
+
+// HDL file - Board_lib, segments_scan, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/segments_scan/functional/verilog.v
+
+// HDL file - Board_lib, Keyboard, functional.
+/home/z86327ag/Cadence/COMP12111/Board_lib/Keyboard/functional/verilog.v
+
+
+// End HDL models
+
+
+// alias module. For internal use only.
+hdlFilesDir/cds_alias.v
+
+// Netlisted models
+
+// netlist file - Board_lib, BoardV3, schematic.
+ihnl/cds0/netlist
+// netlist file - MU0_lib, mux_3_1, schematic.
+ihnl/cds1/netlist
+// netlist file - MU0_lib, decoder_3_8, schematic.
+ihnl/cds2/netlist
+// netlist file - MU0_lib, MU0_control, schematic.
+ihnl/cds3/netlist
+// netlist file - COMP12111_lib, fulladder, schematic.
+ihnl/cds4/netlist
+// netlist file - COMP12111_lib, adder_4bit, schematic.
+ihnl/cds5/netlist
+// netlist file - COMP12111_lib, adder_16bit, schematic.
+ihnl/cds6/netlist
+// netlist file - MU0_lib, MU0_ALU, schematic.
+ihnl/cds7/netlist
+// netlist file - MU0_lib, MU0_conditions, schematic.
+ihnl/cds8/netlist
+// netlist file - MU0_lib, MU0_datapath, schematic.
+ihnl/cds9/netlist
+// netlist file - MU0_lib, MU0, schematic.
+ihnl/cds10/netlist
+// netlist file - MU0_lib, MU0_system, schematic.
+ihnl/cds11/netlist
+
+
+// End HDL models
